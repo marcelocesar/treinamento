@@ -1,0 +1,26 @@
+package com.javabasico;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Pessoa p1 = new Pessoa();
+		p1.setNome("Pele");
+		System.out.printf("%d\n", p1.hashCode());
+		
+		Pessoa p2 = new Pessoa();
+		p2.setNome("dfsdf");
+		System.out.printf("%d\n", p2.hashCode());
+		
+		
+		Set<Pessoa> set = new HashSet<Pessoa>();
+		set.add(p1);
+		set.add(p2);
+		
+		System.out.println(set.size());
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.cursojava;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class TabelaCampeonato {
+	
+	private Set<Item> itens;
+	
+	public TabelaCampeonato() {
+		itens = new TreeSet<Item>();
+	}
+	
+
+	public void adicionarJogo(Jogo jogo) {
+		
+	}
+	
+	public void exibirTabela() {
+		System.out.println("Time\t\tP\tV\tE\tD\tGP\tGC\tSC\n");
+		
+		for(Item item: itens){
+			System.out.printf(
+					"%s\t%d\t%d\t%d\t%d\t%d\t%d\t%d\n",
+					item.getTime().getNome(),
+					item.getPontuacao(),
+					item.getVitorias(),
+					item.getEmpates(),
+					item.getDerrotas(),
+					item.getGolsPro(),
+					item.getGolsContra(),
+					item.getSaldoGols()
+			);
+		}
+	}
+}

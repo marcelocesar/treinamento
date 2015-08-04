@@ -1,0 +1,9 @@
+package com.javabasico;
+
+public class OrdenacaoIdade implements Comparator<Pessoa> {
+
+	public static void main(String[] args) {
+
+	}
+
+}

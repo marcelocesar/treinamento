@@ -1,0 +1,8 @@
+package com.javabasico;
+
+import java.util.Comparator;
+
+public class OrdenacaoIdade implements Comparator<Pessoa> {
+
+	compare
+}

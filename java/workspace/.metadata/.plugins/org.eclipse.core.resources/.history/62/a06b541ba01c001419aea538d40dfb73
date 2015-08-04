@@ -1,0 +1,11 @@
+package com.javabasico;
+
+import java.util.Comparator;
+
+public class OrdenacaoIdade implements Comparator<Pessoa> {
+
+	@Override
+	public int compare(Pessoa p1, Pessoa p2) {
+		return p1.getIdade()-p2.getIdade();
+	}
+}

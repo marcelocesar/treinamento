@@ -1,0 +1,76 @@
+package com.javabasico;
+
+public class Pessoa implements Comparable<Pessoa>{
+
+	//Atributos (caracteristicas)
+	String nome;
+	private int idade;
+	private boolean acordada;
+	
+	public Pessoa() {
+		setNome(null);
+		setIdade(0);
+		acordar();
+	}
+	
+	//Metodos (comportamentos)
+	public int getIdade() {
+		return idade;
+	}
+	
+	public void setIdade(int idade) {
+		if (idade >= 0 && idade <= 150) {
+			this.idade = idade;
+		}
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public boolean isAcordada() {
+		return acordada;
+	}
+
+	public void acordar() {
+		acordada = true;
+	}
+	
+	public void dormir() {
+		acordada = false;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Pessoa) {
+			Pessoa outra = (Pessoa) obj;
+			
+			return getNome().equals(outra.getNome());
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public int hashCode() {
+		if(getNome() == null){
+			return super.hashCode();
+		}
+		
+		return getNome().hashCode();
+	}
+	
+	@Override
+	public String toString() {
+		return getNome();
+	}
+	
+	@Override
+	public int compareTo(Pessoa outra) {
+		return getNome().compareTo(outra.getNome());
+	}
+}

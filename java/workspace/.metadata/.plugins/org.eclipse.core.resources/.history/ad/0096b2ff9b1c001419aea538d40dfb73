@@ -1,0 +1,14 @@
+package com.javabasico;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Pessoa p1 = new Pessoa();
+		System.out.printf("%d\n", p1.hashCode());
+		
+		Pessoa p2 = new Pessoa();
+		System.out.printf("%d\n", p2.hashCode());
+	}
+
+}
